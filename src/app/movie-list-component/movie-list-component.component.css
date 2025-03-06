@@ -1,0 +1,56 @@
+.carousel {
+    padding: 2rem 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+* {
+    color: white;
+}
+
+.card img{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.card {
+    margin: 0.5rem;
+    transition: transform 0.3s;
+    background-color: #000;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+*{
+    background-color: black;
+}
+
+
+
+
+
+
+

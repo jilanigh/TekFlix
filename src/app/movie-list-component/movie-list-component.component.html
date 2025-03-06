@@ -1,0 +1,84 @@
+<div style="margin-top: 80px;">
+  <div class="text-center">
+    <h1 class="text-white">Our Movies</h1>
+    <div class="d-flex justify-content-center mt-4">
+      <nav class="nav nav-pills">
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">All</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Action</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Comedy</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Adventure</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Fantasy</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Horror</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Mystery</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Romance</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Sci-Fi</a>
+        <a class="nav-link rounded-pill bg-white text-dark border mx-2 px-4 py-2">Thriller</a>
+      </nav>
+    </div>
+    
+    <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="d-flex justify-content-center mt-4">
+      </div>
+      <div class="carousel-inner">
+        <!-- First Slide -->
+        <div class="carousel-item active">
+            <div class="row mx-auto" style="max-width: 1200px;">
+              <div class="col-sm-6 col-md-3" *ngFor="let film of films">
+                  <app-single-movie [film]="film"></app-single-movie>
+              </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="card">
+                <img src="captain_america.jfif" class="card-img-top" alt="Movie 1">
+                <div class="card-body">
+                  <h6 class="card-title text-white">Captain America</h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="card">
+                <img src="back_action.jfif" class="card-img-top" alt="Movie 2">
+                <div class="card-body">
+                  <h5 class="card-title text-white">Back Action</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="card">
+                <img src="the_sand_castle.jfif" class="card-img-top" alt="Movie 3">
+                <div class="card-body">
+                  <h5 class="card-title text-white">The Sand Castle</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="card">
+                <img src="captain_america.jfif" class="card-img-top" alt="Movie 4">
+                <div class="card-body">
+                  <h5 class="card-title text-white">Captain America</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="card">
+                <img src="back_action.jfif" class="card-img-top" alt="Movie 5">
+                <div class="card-body">
+                  <h5 class="card-title text-white">Back Action</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="card">
+                <img src="ad_vitam.jfif" class="card-img-top" alt="Movie 6">
+                <div class="card-body">
+                  <h5 class="card-title text-white">Ad Vitam</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

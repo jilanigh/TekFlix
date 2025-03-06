@@ -1,0 +1,112 @@
+
+<div style="background-color: #000;">
+    <div class="logo" style="width: 100%; height: 600px; opacity: 1; filter: brightness(50%); 
+           background: url('cinema.jfif') no-repeat center center; 
+           background-size: cover; position: relative;">
+        <!-- Button positioned at the bottom right -->
+        <button class="btn btn-outline-light btn-lg" (click)="goToMovieList()"
+            style="height: 60px; width: 300px; position: absolute; bottom: 200px; right: 370px; border-radius: 5px;">
+            Watch Now <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+    <div class="text-center">
+        <h1 class="text-white">New Movies</h1>
+        <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="row mx-auto" style="max-width: 1200px;">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="captain_america.jfif" class="card-img-top" alt="Movie 1">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">Captain America</h5>
+                                    <p class="card-text">Steve Rogers becomes Captain America, battling the Red Skull
+                                        and Hydra in World War II, while struggling to adapt to a changed world after
+                                        being frozen for decades.</p>
+                                    <a href="#" class="btn btn-outline-light">Watch Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="back_action.jfif" class="card-img-top" alt="Movie 2">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">Back Action</h5>
+                                    <p class="card-text">An elite team races against time to prevent an international
+                                        conspiracy, facing betrayal and danger as they fight to save the world.</p>
+                                    <a href="#" class="btn btn-outline-light">Watch Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="the_sand_castle.jfif" class="card-img-top" alt="Movie 3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">The Sand Castle</h5>
+                                    <p class="card-text">Stuck on a deserted island, a family battles the elements and
+                                        an uncertain future, finding resilience in the harsh realities of survival.</p>
+                                    <a href="#" class="btn btn-outline-light">Watch Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="captain_america.jfif" class="card-img-top" alt="Movie 4">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">Captain America</h5>
+                                    <p class="card-text">Steve Rogers becomes Captain America, battling the Red Skull
+                                        and Hydra in World War II, while struggling to adapt to a changed world after
+                                        being frozen for decades.</p>
+                                    <a href="#" class="btn btn-outline-light">Watch Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="back_action.jfif" class="card-img-top" alt="Movie 5">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">Back Action</h5>
+                                    <p class="card-text">An elite team races against time to prevent an international
+                                        conspiracy, facing betrayal and danger as they fight to save the world.</p>
+                                    <a href="#" class="btn btn-outline-light">Watch Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="ad_vitam.jfif" class="card-img-top" alt="Movie 6">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white">Ad Vitam</h5>
+                                    <p class="card-text">In a future where immortality is possible, a young man and an
+                                        investigator uncover dark secrets behind mysterious deaths, questioning the
+                                        ethics of eternal life.</p>
+                                    <a href="#" class="btn btn-outline-light">Watch Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    
+</div>
+    
+    
+    <div class="row mx-auto" style="max-width: 1200px;">
+        <div class="col-md-4" *ngFor="let film of films"> 
+            <div class="card">
+                <span *ngIf="film.isNew" class="badge bg-warning position-absolute top-0 end-0 m-2">New</span>
+                <img [src]="film.image" class="card-img-top" alt="{{film.title}}"> 
+                <div class="card-body">
+                    <h5 class="card-title text-white">{{film.title}}</h5>
+                    <p class="card-text">{{film.description}}</p>
+                <a href="#" class="btn btn-outline-light">Watch Details</a>
+            </div>
+        </div>
+    </div>
+</div>
