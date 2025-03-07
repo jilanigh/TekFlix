@@ -8,7 +8,7 @@ import { MovieDetailComponentComponent } from './movie-detail-component/movie-de
 const routes: Routes = [
   { path: '', component: HomeComponentComponent},
   { path: 'movie-list', component: MovieListComponentComponent},
-  {path: 'movie-details/:id', component: MovieDetailComponentComponent},
+  { path: 'movie-details/:id', component: MovieDetailComponentComponent},
   { path: '**', component: NotFoundComponent}
 ];
 

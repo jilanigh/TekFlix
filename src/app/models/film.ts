@@ -7,6 +7,7 @@ export class Film {
     year: number;
     genre: string;
     isNew: boolean;
+    trailerUrl?: string;
 
     constructor(id: number, title: string, description: string, image: string, rating: number, year: number, genre: string, isNew: boolean) {
         this.id = id;

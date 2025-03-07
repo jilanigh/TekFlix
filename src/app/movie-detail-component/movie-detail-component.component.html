@@ -1,1 +1,33 @@
-<p>movie-detail-component works!</p>
+<div class="movie-detail-container" *ngIf="film">
+    <div class="movie-content">
+      <div class="movie-poster">
+        <img [src]="film.image" [alt]="film.title">
+      </div>
+      <div class="movie-info">
+        <h1>{{film.title}}</h1>
+        <div class="movie-metadata">
+          <span class="year">{{film.year}}</span>
+          <span class="genre">{{film.genre}}</span>
+          <span class="rating">★ {{film.rating}}</span>
+        </div>
+        <div class="description">
+          <h3>Overview</h3>
+          <p>{{film.description}}</p>
+        </div>
+        <div class="actions">
+          <button class="btn-watch">Watch Now</button>
+          <button class="btn-trailer" (click)="openModal()">Watch Trailer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <iframe *ngIf="safeTrailerUrl" [src]="safeTrailerUrl" width="910" height="490" frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+  
+  
