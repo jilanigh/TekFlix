@@ -30,6 +30,7 @@ import { SingleMovieComponent } from './single-movie/single-movie.component';
     BrowserModule,
     AppRoutingModule
   ],
+  //service nes7a9 bech ninjectihom :@inject tabda fergha
   providers: [],
   bootstrap: [AppComponent]
 })
