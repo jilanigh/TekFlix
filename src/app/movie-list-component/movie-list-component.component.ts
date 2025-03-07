@@ -9,5 +9,17 @@ import { Film, FILMS } from '../models/film';
 })
 export class MovieListComponentComponent {
   films: Film[] = FILMS;
+  categories: string[] = ['All','Action','Comedy','Adventure','Fantasy','Horror','Romance']
+  selectdCategorie: string = 'All'
+  filtreFilms?: Film[];
 
+  selectedCategorie(cat : string){
+    this.selectdCategorie= cat;
+  }
+
+  get filtredFilm(): Film[]{
+    return this.selectdCategorie === 'All'
+    ? this.films
+    : this.films.filter(f=>f.genre === this.selectdCategorie);
+  }
 }

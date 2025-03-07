@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Film, FILMS } from '../models/film';
-import { SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie-detail-component',
@@ -15,10 +15,10 @@ export class MovieDetailComponentComponent {
   film?: Film; // Variable de type Film pour stocker le film avec l'ID spécifié dans la route.
   safeTrailerUrl!: SafeResourceUrl;
   showModal = false;
-  sanitizer: any;
 
 
-  constructor(private route: ActivatedRoute) {} // Injection du service dans le constructeur
+
+  constructor(private route: ActivatedRoute ,private sanitizer: DomSanitizer) {} // Injection du service dans le constructeur
 
   ngOnInit() {
     console.log("INSIDE ngOnInit");

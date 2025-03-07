@@ -9,7 +9,8 @@ export class Film {
     isNew: boolean;
     trailerUrl?: string;
 
-    constructor(id: number, title: string, description: string, image: string, rating: number, year: number, genre: string, isNew: boolean) {
+    constructor(id: number, title: string, description: string, image: string,
+         rating: number, year: number, genre: string, isNew: boolean, trailerUrl: string) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -18,6 +19,7 @@ export class Film {
         this.year = year;
         this.genre = genre;
         this.isNew = isNew;
+        this.trailerUrl = trailerUrl;
     }
 }
 
@@ -30,7 +32,8 @@ export const FILMS: Film[] = [
     rating: 4.5,
     year: 2011,
     genre: "Action",
-    isNew: true
+    isNew: true,
+    trailerUrl: "https://www.youtube.com/watch?v=1pHDWnXmK7Y"
 },
 {
     id: 2,
